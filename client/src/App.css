@@ -1,0 +1,1891 @@
+/* Стилизация проекта - Mobile First */
+/* ---------------------------------  UTILITIES -------------------------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* COLORS */
+.black-bg {
+    background-color: black;
+}
+
+.theme-dark {
+    background: #181818;
+    color: #000;
+    /* border-right: 1px solid #3b3b3b; */
+}
+
+.theme-red {
+    background: #ef4136;
+    color: #fff;
+    margin-right: -1px;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+}
+
+.row__child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+button {
+    border: 0;
+    padding: 8px;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    background: #4a4a4a;
+    border: none;
+    font-weight: 400;
+    font-size: 1.14rem;
+    transition: all 0.2s ease;
+}
+
+.button--large {
+    padding: 16px;
+}
+
+.rizk-btn,
+.btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #000;
+    padding: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+    border-radius: 50px;
+}
+
+.btn-black {
+    background: #000;
+    color: white;
+}
+
+.btn-black:hover {
+    background: #292929;
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+.yellow-btn,
+.btn-yellow {
+    background: #ffe500;
+    color: #000 !important;
+}
+
+.outcome__button {
+    line-height: normal;
+    padding: 0 8px;
+    background-color: #4a4a4a;
+    border-radius: 30px;
+    border: none;
+    letter-spacing: 0;
+    text-overflow: clip;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.outcome__button:hover {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    border: inherit;
+}
+
+.outcome__button--active {
+    background-color: #ffe500;
+    border: none;
+    color: #ffe500;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.outcome__button--active:hover {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 229, 0, 0.95);
+    color: initial;
+    border: none;
+}
+
+.yellow-btn:hover,
+.btn-yellow:hover {
+    background: #fff348;
+}
+
+.rizk-btn:active,
+.btn:active {
+    transform: scale(0.95);
+}
+
+.match-card__onethird-button {
+    width: calc(33.333% - 6px);
+}
+
+.match-card__onethird-button.button--large {
+    padding: 0 16px;
+    font-size: 0.86rem;
+    font-weight: 400;
+}
+
+.match-card__half-button {
+    width: calc(50% - 4px);
+}
+
+.match-card__half-button.button--large {
+    padding: 0 16px;
+    font-size: 0.86rem;
+    font-weight: 400;
+}
+
+.button__text--text-1-total-2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    color: #dbdbdb;
+    font-weight: 600;
+    font-size: 0.86rem;
+}
+
+.button__text--text-2-total-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.86rem;
+    color: #fff;
+}
+
+.secondary-navigation__button {
+    font-size: 1.14rem;
+    overflow: visible;
+    line-height: 20px;
+    padding: 11px 18px;
+    font-weight: 400;
+    border-radius: 30px;
+    background-color: #212121;
+    border: 1px solid #393939;
+    color: #fff;
+    letter-spacing: auto;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/* .secondary-navigation__button--isActive {
+    background-color: #ffe500;
+    color: #000;
+    border: 1px solid #ffe500;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+} */
+
+.secondary-navigation__button:hover {
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+    border: 1px solid #393939;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.button-svg-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button-svg-text .button__svg.icon {
+    margin-right: 10px;
+}
+
+.sm-buttons {
+    margin: 24px 0 8px;
+    padding: 0 16px;
+}
+
+.sm-buttons button {
+    margin-bottom: 16px;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+    /* background: #dc3545; */
+    color: #dc3545;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+    display: block;
+}
+
+.icon__svg {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    z-index: 3;
+    fill: #212121;
+}
+
+.accordion-title__icon--arrow svg {
+    fill: #fff;
+}
+
+.category__icon-svg {
+    fill: #fff;
+    min-width: 1.14rem;
+    max-width: 1.14rem;
+    min-height: 1.14rem;
+    max-height: 1.14rem;
+    vertical-align: initial;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.category__icon-svg--active {
+    fill: #dcdcdc;
+}
+
+/* 
+!!!!!!!!!!!!!
+!!!!!!!!!!!!!
+-------------MAIN STYLESHEET--------------------
+!!!!!!!!!!!!!
+!!!!!!!!!!!!!
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: gibson, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: #ffffff;
+    color: #aaaaaa;
+}
+
+input,
+button {
+    border: 0;
+    padding: 8px;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.outcome__button--active {
+    background-color: #ffe500;
+    border: none;
+    color: black;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.outcome__button--active span {
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+#side-menu {
+    display: none;
+}
+
+#side-menu .main-menu {
+    width: 100%;
+}
+
+#side-menu .main-menu__link {
+    padding: 10px;
+    padding-left: 50px;
+    display: block;
+    position: relative;
+}
+
+#side-menu .main-menu__link svg {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+#side-menu .main-menu__link:hover {
+    color: #ffe500;
+    background: #454545;
+}
+
+.main-menu__link:hover path {
+    fill: #ffe500;
+}
+
+/* Для статических страниц */
+.static-page {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 74px 40px 100px 40px;
+    word-wrap: break-word;
+}
+
+.static-page h1 {
+    margin-bottom: 50px;
+    text-transform: none;
+    font-size: 32px;
+    font-weight: 300;
+    color: #595959;
+}
+
+.static-page p {
+    color: #94948d;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.static-page ol {
+    color: #94948d;
+    padding-left: 18px;
+}
+
+.static-page li {
+    margin-bottom: 5px;
+}
+
+footer {
+    display: block;
+    color: #6a6a6a;
+    min-height: 100px;
+    overflow: hidden;
+    text-align: center;
+    padding: 32px 0;
+    border-top: 1px solid #545454;
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(#000000),
+        to(#282828)
+    );
+    background: linear-gradient(0deg, #000000, #282828);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.mobile__auth-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgb(239, 65, 54);
+}
+
+.mobile__auth-header .btn-wide {
+    width: 28%;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px;
+    letter-spacing: 0.05em;
+    margin: 15px;
+}
+
+.mobile__auth-header .mobile__logo {
+    height: 26px;
+    width: 110px;
+    vertical-align: middle;
+}
+
+.mobile__user-footer--wrap {
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgb(239, 65, 54);
+}
+
+.mobile__user-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .mobile__user-footer li {
+    display: block;
+} */
+
+.mobile__user-footer li a {
+    display: block;
+    margin-top: 10px;
+}
+
+.mobile__user-footer svg {
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.mobile__user-footer svg path {
+    fill: #fff;
+}
+
+.mobile__user-footer span {
+    text-align: center;
+    color: #fff;
+    /* width: 100%; */
+}
+
+#main-content {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 60px;
+    margin-bottom: 82px;
+}
+
+.primary-navigation__container {
+    overflow: hidden;
+    padding: 10px 0;
+    background-color: #000;
+}
+
+.primary-navigation__list {
+    overflow-x: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+.primary-navigation__list::-webkit-scrollbar {
+    display: none;
+}
+
+.primary-navigation__list-item {
+    background-color: #212121;
+    border: 1px solid #393939;
+    border-radius: 50%;
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin-left: 8px;
+}
+
+.primary-navigation__list-item:hover {
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: #000;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.primary-navigation__list-item--active:hover {
+    background-color: #ffe500;
+    color: #000;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.primary-navigation__list-item--active {
+    background-color: #ffe500;
+    color: #000;
+    border: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.primary-navigation__list-item--active .primary-navigation__icon {
+    fill: #000;
+}
+
+.primary-navigation__icon {
+    margin: auto;
+    height: 72px;
+    display: block;
+}
+
+.primary-navigation__icon,
+.primary-navigation__icon g {
+    fill: #fff;
+}
+
+.secondary-navigation__container {
+    background-color: inherit;
+    overflow: hidden;
+    padding: 8px 0px;
+    margin-bottom: 16px;
+}
+
+.secondary-navigation__list {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.secondary-navigation__list::-webkit-scrollbar {
+    display: none;
+}
+
+.secondary-navigation__list-wrap {
+    margin-left: 8px;
+    display: flex;
+    flex: 0 0 120px;
+}
+
+.secondary-navigation__list-item {
+    display: block;
+}
+
+/* С помощью реакта установили клас isActive, далее применяем активные стили к вложенному button */
+.secondary-navigation__list-item.isActive .secondary-navigation__button {
+    background-color: #ffe500;
+    color: #000;
+    border: 1px solid #ffe500;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.card-list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px -4px 0;
+    width: 100%;
+}
+
+/* Стили Event-page */
+.event-page-container .card-list__cards {
+    width: 100%;
+}
+
+.event-page__card.sport-card {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.event-page__card.sport-card:hover {
+    background-color: #212121;
+}
+
+.event-markets-header__header h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #bebebe;
+    margin-bottom: 6px;
+}
+
+.event-markets__wrap.sport-card {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.accordion {
+    margin-bottom: 30px;
+}
+
+.accordion__title {
+    background-color: #ef4136;
+    color: #ffe500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 8px 16px 6px;
+    border-radius: 3px;
+    font-family: league-gothic, sans-serif;
+    line-height: 1;
+    font-size: 2.14rem;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.accordion-closed .accordion__title svg {
+    transform: rotate(180deg);
+}
+
+.accordion__title:hover {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    background-color: #ff4d43;
+}
+
+.accordion-title__text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    color: #fff;
+}
+
+.accordion-title__icon--arrow {
+    height: 2.14rem;
+}
+
+.accordion__inner-content {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 400ms linear;
+}
+
+.accordion__inner-content.accordion-isVisible {
+    display: block;
+    height: auto;
+}
+
+.sport-card {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #212121;
+    margin: 0 4px 8px;
+    width: calc(100% - 8px);
+}
+
+.sport-card:hover {
+    cursor: pointer;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    background-color: #313131;
+}
+
+.sport-card__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sport-card__header .sport-card__leagueSpec {
+    display: flex;
+    align-items: center;
+}
+
+.sport-card__header .sport-card__icon {
+    margin-right: 5px;
+}
+
+/* .sport-card__header .sport-card__leagueName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1rem;
+    font-family: canada-type-gibson,sans-serif;
+    font-weight: 400;
+    height: 20px;
+    color: #dcdcdc;
+    line-height: 1.07;
+    padding-top: 1px;
+    max-width: calc(100% - 27px);
+} */
+
+.sport-card__market-count:before {
+    content: "+";
+}
+
+.sport-card__header .sport-card__market-count {
+    display: inline-block;
+    background-color: #4a4a4a;
+    border-radius: 15px;
+    padding: 8px 14px 8px 12px;
+    color: #fff;
+    font-weight: 600;
+    height: 28px;
+    line-height: 13px;
+    font-size: 0.86rem;
+    /* position: relative; */
+    bottom: 5px;
+}
+
+.sport-card .sport-card__start-time {
+    background: #368aef;
+    width: auto;
+    display: inline-block;
+    height: 20px;
+    border-radius: 7px;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 20px;
+    font-size: 0.86rem;
+}
+
+.sport-card__btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sport-card__team-paragraph {
+    margin: 10px 0px;
+}
+
+.sport-card .team__name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: canada-type-gibson, sans-serif;
+    display: block;
+    height: 21px;
+    line-height: 1;
+}
+
+/* МОДАЛЬНЫЕ ОКНА */
+.color-green {
+    color: #009a39;
+}
+
+.mudal {
+    top: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    /* left: 158px; */
+    left: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.mudal-shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    /* left: 158px; */
+    left: 0;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: -50%;
+    height: 200%;
+    background: #000000;
+    left: 0;
+    opacity: 0.7;
+}
+
+.mudal-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.mudal-content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mudal button[name="close"] {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-image: url("/src/images/closeButton.png");
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    z-index: 33;
+}
+
+.mudal button[name="close"]:hover {
+    opacity: 0.8;
+}
+
+.mudal-dialog {
+    text-align: left;
+    z-index: 29;
+    overflow: hidden;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    margin: 20px auto;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    opacity: 1;
+    color: #7d7d7d;
+    max-width: 666px;
+}
+
+.mudal-dialog > div {
+    padding: 32px;
+}
+
+.mudal-dialog h1 {
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.mudal-dialog header {
+    padding: 0 68px 0 32px;
+    background: #e2e8f0;
+    min-height: 72px;
+}
+
+.mudal-dialog header h1 {
+    text-align: center;
+    line-height: 40px;
+    padding: 16px 0;
+}
+
+.mudal-dialog p {
+    margin: 0 auto 24px auto;
+}
+
+.mudal-dialog a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.mudal-dialog button {
+    width: 100%;
+    margin: 24px 0 16px;
+    background: #292929;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.mudal-dialog input {
+    width: 100%;
+    margin: 4px auto 16px;
+    color: #000000;
+    border: 1px solid #d1d1d1;
+}
+
+.registration-modal {
+    max-width: 920px;
+    margin: auto;
+}
+
+#registration-modal .mudal-dialog {
+    z-index: 33;
+    max-width: inherit;
+}
+
+.mudal-dialog.green header {
+    background: #009a39;
+}
+
+.mudal-dialog.green header h1 {
+    color: #ffffff;
+}
+
+.mudal-dialog.green > div button {
+    background: #009a39;
+}
+
+.mudal-dialog.green > div button:hover {
+    background: #00c147;
+}
+
+.register-form {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.register-form .requirements {
+    margin-top: 5px;
+}
+
+.register-form p {
+    font-size: 16px;
+}
+
+.register-form .align-labels-last .form-group label {
+    margin-left: 30px;
+}
+
+.register-form .align-labels-last .form-group span {
+    margin-left: -30px;
+}
+
+.register-form .dob .select-container {
+    width: 27%;
+    margin-right: 1%;
+}
+
+.register-form .dob .select-container:nth-child(3) {
+    width: 40%;
+    margin-right: 0;
+}
+
+.progress-slogan {
+    text-align: center;
+    display: block;
+}
+
+.register-form {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.register-form .password-wrap {
+    position: relative;
+}
+
+/* .register-form .sex label {
+  margin: 0 12px;
+} */
+
+.register-form .accept-terms {
+    color: #7d7d7d;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.reg-inner {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    vertical-align: top;
+}
+
+.form-group input {
+    display: inline-block;
+    background: transparent;
+    width: 100%;
+    margin: 0;
+    padding: 10px 35px 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-group .validator-icon {
+    top: 36px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    display: none;
+    /* background: url(); */
+    background-size: 24px;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.form-group .select-wrap {
+    display: inline-block;
+    background: transparent;
+    width: 100%;
+    margin: 0;
+    padding: 10px 35px 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-group .select-wrap {
+    padding: 4px;
+}
+
+.form-group .select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-group .select-container .arrow-down {
+    position: absolute;
+    top: 13px;
+    right: 5px;
+}
+
+.form-group select {
+    margin: 0;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-right: 25px;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 23px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #4c4c4c;
+}
+
+.regsect-second .form-group {
+    width: 100%;
+    display: block;
+    margin-right: -4px;
+}
+
+/* .regsect-second .form-group:nth-child(even) {
+  padding-left: 16px;
+} */
+
+input[type="radio"] + label span,
+input[type="checkbox"] + label span {
+    background: url("/src/images/sexChekbox.png") top center;
+    background-size: 24px;
+    background-position: 0 0px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + label span,
+input[type="radio"]:checked + label span {
+    background-position: 0 24px;
+}
+
+.login-links {
+    margin: auto;
+    margin-top: 10px;
+}
+
+.login-links .left {
+    float: left;
+}
+
+.login-links .right {
+    float: right;
+}
+
+.login-shade {
+    z-index: 25;
+}
+
+.registration-shade {
+    z-index: 31;
+}
+
+/* Модальное окно выбора лиги */
+.popup-browse .mudal-dialog {
+    width: 630px;
+    max-height: 80%;
+    min-height: 500px;
+    padding: 40px 50px;
+    background-color: #212121;
+}
+
+.popup-browse__header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    background-color: transparent;
+    font-size: 24px;
+    min-height: 48px;
+    margin: 4px 0 10px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup-browse__header .popup-browse__header--title {
+    line-height: 39px;
+    padding: 0px;
+    text-transform: none;
+    font-size: 42px;
+}
+
+.popup-browse__header .close-button {
+    cursor: pointer;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    width: 27px;
+    height: 27px;
+    background-color: transparent;
+}
+
+.popup-browse__header .icon__svg {
+    fill: #fff;
+}
+
+.popup-browse__sports-categories {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.popup-browse__sports-categories--list {
+    /* overflow-x: ; */
+    overflow-y: scroll;
+    height: 350px;
+    font-size: 1.21rem;
+    color: #fff;
+    font-weight: 900;
+    margin: 0 4px 0 15px;
+}
+
+.sports-categories__item {
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 9px 0px;
+    transition: all 0.2s ease;
+}
+
+.sports-categories__item.activated .sports-categories__sub-category-list {
+    display: block;
+}
+
+.sports-categories__sub-category-list {
+    display: none;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 11px;
+}
+
+.popup-browse__sports-categories--list::-webkit-scrollbar {
+    display: none;
+}
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 45; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #212121;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 630px;
+    max-height: 80%;
+    min-height: 500px;
+    padding: 40px 50px;
+}
+
+/* Корзина ставок */
+.betslip {
+    max-width: 375px;
+    z-index: 1;
+    overflow-y: auto;
+    width: 100%;
+    max-height: calc(100% - 120px);
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    max-width: 375px;
+    margin-right: 16px;
+    background: #212121;
+    z-index: 8;
+    box-shadow: 0 -3px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+.betslip::-webkit-scrollbar {
+    display: none;
+}
+
+.betslip-header {
+    position: relative;
+    font-size: 1.07rem;
+    color: #000;
+    height: 60px;
+    background: #ffe500;
+    font-weight: 600;
+    padding: 22px 25px;
+}
+
+.betslip-header__indicator {
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.betslip-header__indicator-text {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    left: 0;
+    top: 1px;
+}
+
+.betslip-header__toggler {
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+}
+
+.betslip__body {
+    scroll-behavior: smooth;
+}
+
+.betslip__content {
+    padding: 0;
+    background: #212121;
+    position: relative;
+}
+
+.betslip__btn-place-bet {
+    height: 50px;
+    font-size: 1.14rem;
+    font-weight: 600;
+    background: #00a54d;
+    color: #fff;
+    border: none;
+    text-transform: none;
+    max-width: 100%;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    padding: 0 27px;
+    transition: all 0.2s ease;
+}
+
+.betslip__btn-place-bet:hover {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #00be59;
+    cursor: pointer;
+}
+
+.betslip__bottom {
+    background-color: #212121;
+    padding: 15px 24px 24px;
+}
+
+.betslip__bottom button {
+    text-transform: none;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.totals {
+    margin: 20px 0 12px;
+}
+
+.totals__row {
+    margin-bottom: 6px;
+    height: 17px;
+}
+
+.taxes {
+    margin: 13px 0 12px;
+}
+
+.tabs {
+    height: 60px;
+    width: 100%;
+    background: #303030;
+}
+
+.tabs__tab {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    line-height: 60px;
+    height: 100%;
+    color: #666;
+    font-weight: 600;
+    font-size: 1.07rem;
+}
+.tabs__tab--active {
+    color: #ffe500;
+}
+
+.tabs__tab--disabled {
+    cursor: pointer;
+    color: #666;
+}
+.selection__container {
+    position: relative;
+}
+
+.selection {
+    padding: 12px 24px 8px;
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.07rem;
+    line-height: 1.1em;
+    background: #212121;
+    position: relative;
+}
+
+.selection__title {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.selection__close {
+    min-width: 12px;
+    max-width: 12px;
+    min-height: 16px;
+    max-height: 16px;
+    cursor: pointer;
+    position: relative;
+    left: 16px;
+    opacity: 0.8;
+    fill: #fff;
+}
+.selection__close-icon {
+    min-width: 12px;
+    max-width: 12px;
+    min-height: 16px;
+    max-height: 16px;
+    vertical-align: middle;
+    fill: #fff;
+}
+.selection__event_name {
+    max-width: 82%;
+    color: #dcdcdc;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    font-size: 1.07rem;
+    line-height: 1.1em;
+}
+.selection__sport-icon {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-right: 5px;
+}
+.selection__sport-icon-svg {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    fill: #fff;
+}
+
+.selection__separator {
+    margin: 10px 0 0;
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+.selection__separator--svg {
+    width: auto;
+    height: 16px;
+    display: block;
+}
+.selection__separator--svg .icon__svg {
+    height: 16px;
+    position: relative;
+    bottom: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0 0 6px;
+    color: #fff;
+}
+
+.selection__outcome_name {
+    margin-right: 5px;
+}
+
+.odd__value span {
+    color: #ffe500;
+    font-weight: 700;
+}
+
+.selection__sport-icon {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-right: 5px;
+}
+
+.selection__event_name {
+    max-width: 82%;
+    color: #dcdcdc;
+}
+
+.selection__event_name,
+.igc-spfe .selection__market_name,
+.igc-spfe .selection__outcome_name {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    font-size: 15px;
+    line-height: 1.1em;
+}
+
+.selection__sport-icon-svg {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    fill: #fff;
+}
+
+.icon__tooltipContent {
+    position: absolute;
+    background: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    top: 15px;
+    left: 10px;
+    display: none;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 0.86rem;
+    z-index: 4;
+}
+
+.selection__tooltip {
+    top: auto;
+    bottom: 15px;
+    left: 15px;
+}
+
+.row__child.text-input {
+    margin-right: 11px;
+}
+
+.text-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.selection__bet-buttons {
+    margin-top: 12px;
+}
+
+.european-selection__button.row__child {
+    margin-right: 10px;
+}
+
+.european-selection__button {
+    background-color: #4a4a4a;
+    border: initial;
+    color: #fff;
+    font-weight: 600;
+}
+
+.european-selection__button:last-child {
+    margin-right: 0;
+}
+
+.text-input__label--inside {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+
+.text-input__label--disabled-bet-suggestions {
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+
+.betslip__content span.text-input__label--inside {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    width: 8px;
+}
+
+.text-input__control {
+    border: none;
+    border-radius: 3px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: right;
+    color: #59bcff;
+    font-family: canada-type-gibson, sans-serif;
+    font-size: 13.6px;
+}
+
+.betslip__content input.text-input__control {
+    padding-left: 30px;
+    text-align: left;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+}
+
+.totals__total-stake--amount {
+    font-size: 1.07rem;
+    flex: 0.5;
+    font-weight: 600;
+    text-align: right;
+    color: #fff;
+}
+
+.totals__total-stake--title {
+    color: #ffffff;
+    font-size: 1.07rem;
+    flex: 1;
+    font-weight: 600;
+    /*text-align: right;*/
+}
+
+.totals__total-stake--title span {
+    margin-left: 5px;
+    display: inline-flex;
+    color: #ffe500;
+    font-weight: 700;
+    /* text-overflow: ellipsis; */
+    max-width: 106px;
+    /* overflow: hidden; */
+}
+
+.totals__potential-wins--title {
+    font-size: 1.07rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.totals__potential-wins--amount,
+.totals__potential-wins--title,
+.totals__total-wins--amount,
+.totals__total-wins--title {
+    color: #ffe500;
+    font-weight: 600;
+}
+
+.totals__potential-wins--amount,
+.igc-spfe .totals__total-stake--amount,
+.igc-spfe .totals__total-wins--amount {
+    font-size: 1.07rem;
+    flex: 0.5;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    /* СКОРЕЕ ВСЕГО НЕ НУЖНО */
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* СКОРЕЕ ВСЕГО НЕ НУЖНО */
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* С ЭТОГО МОМЕНТА ---  СПОРТИВНЫЕ КАРТОЧКИ ПО ДВЕ */
+
+    .accordion__inner-content.accordion-isVisible {
+        display: flex;
+        height: auto;
+    }
+
+    .accordion__inner-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .sport-card {
+        margin: 0 4px 8px;
+        width: calc(50% - 8px);
+        /* закладка */
+    }
+
+    .regsect-second .form-group {
+        width: 50%;
+        display: inline-block;
+        margin-right: -4px;
+    }
+
+    .regsect-second .form-group:nth-child(even) {
+        padding-left: 16px;
+    }
+
+    .register-form .sex label {
+        margin: 0 12px;
+    }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) {
+    /* С ЭТОГО МОМЕНТА ---  СПОРТИВНЫЕ КАРТОЧКИ ПО ТРИ */
+    /* С ЭТОГО МОМЕНТА ---  ПОЯВЛЯЕТСЯ САЙД МЕНЮ */
+
+    body {
+        margin-left: 158px;
+    }
+
+    #all-content {
+        position: absolute;
+        width: calc(100% - 158px);
+        /* left: 158px; */
+    }
+
+    #main-content {
+        margin-top: 0;
+        width: calc(100% - 60px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #mobile-menus {
+        display: none;
+    }
+
+    /* Боковое меню */
+    #side-menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 158px;
+        height: 100%;
+        z-index: 20;
+        box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.5);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        font-weight: 300;
+    }
+
+    .menu-logo {
+        padding: 0 16px;
+        padding-top: 24px;
+    }
+
+    .menu-logo a {
+        display: block;
+        cursor: pointer;
+    }
+
+    .main-navigation {
+        width: 158px;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* overflow-y: scroll;
+      padding-right: 25px; */
+        box-sizing: content-box;
+    }
+
+    .main-menu__link {
+        color: #fff;
+        display: block;
+        padding: 5px 0;
+        padding-left: 15px;
+    }
+
+    /* Спортивные карточки */
+    .accordion__inner-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .accordion__inner-content.accordion-isVisible {
+        display: flex;
+        height: auto;
+    }
+
+    .sport-card {
+        margin: 0 4px 8px;
+        width: calc(50% - 8px);
+        /* закладка */
+    }
+}
+
+@media only screen and (min-width: 1340px) {
+    #main-content {
+        margin-top: 0;
+        width: calc(100% - 130px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secondary-navigation__list {
+        flex-wrap: wrap; /* возволяем перенос кнопок с лигами */
+    }
+
+    .secondary-navigation__list .secondary-navigation__list-wrap {
+        margin-bottom: 10px;
+    }
+
+    /* Спортивные карточки */
+    .accordion__inner-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .accordion__inner-content.accordion-isVisible {
+        display: flex;
+        height: auto;
+    }
+
+    .sport-card {
+        margin: 0 4px 8px;
+        width: calc(33.3333% - 8px);
+        /* закладка */
+    }
+}

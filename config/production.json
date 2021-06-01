@@ -1,0 +1,4 @@
+{
+	"MONGO_URI": "mongodb+srv://Ihor:4EtfbAhJDC71537i@cluster0-usgov.mongodb.net/contact-keeper?retryWrites=true",
+	"jwtSecret": "secret"
+}

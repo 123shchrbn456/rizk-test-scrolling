@@ -1,0 +1,17 @@
+<svg className="icon__svg" width="28px" height="28px" viewBox="0 0 8 31" version="1.1">
+	<defs>
+		<path  d="M13.996,-1.67033684 C13.4275,-2.10988772 12.5725,-2.10988772 12.004,-1.67033684 L-1.496,8.76410552 C-1.817,9.01192352 -2,9.36799887 -2,9.74103018 L-2,26.6956947 C-2,27.4156712 -1.328,28 -0.5,28 L8.5,28 L8.5,18.8698629 L17.5,18.8698629 L17.5,28 L26.5,28 C27.328,28 28,27.4156712 28,26.6956947 L28,9.74103018 C28,9.36799887 27.817,9.01322783 27.496,8.76540982 L13.996,-1.67033684 Z" id="path-1"></path>
+	</defs>
+	<g id="375px-Football-Worldcup-+-Outrights" transform="translate(0.000000, -100.000000)">
+		<g id="Group-3" transform="translate(-32.000000, 79.000000)">
+			<g id="Home" transform="translate(0.000000, 0.446400)">
+				<g id="Colour-/--Black" transform="translate(23.833061, 23.106012)">
+					<mask id="mask-2">
+						<use xlink:href="#path-1"></use>
+					</mask>
+					<use id="Mask" fill-rule="nonzero" xlink:href="#path-1"></use>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
